@@ -1,0 +1,24 @@
+{
+  "name": "inf-server",
+  "version": "1.0.0",
+  "description": "Interactive Nonfiction panorama-processing server",
+  "homepage": "http://inf.jesse.ws/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okofish/inf-server.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesse Friedman <jesse@jesse.ws> (https://jesse.ws/)",
+  "license": "ISC",
+  "dependencies": {
+    "clarifai": "git+https://github.com/Clarifai/clarifai-javascript.git",
+    "express": "^4.13.4",
+    "gcloud": "^0.34.0",
+    "gpan": "git+https://github.com/okofish/gpan.git",
+    "underscore": "^1.8.3",
+    "watson-developer-cloud": "git+https://github.com/watson-developer-cloud/node-sdk#visual-recognition"
+  }
+}

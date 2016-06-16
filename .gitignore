@@ -1,0 +1,6 @@
+# Panorama directory
+panos/*
+!.gitkeep
+
+# API credentials
+auth.json

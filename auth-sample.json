@@ -1,0 +1,28 @@
+{
+  "google": {
+    "projectId": "project-name-121453",
+    "credentials": {
+      "type": "service_account",
+      "project_id": "project-name-121453",
+      "private_key_id": "adc83b19e793491b1c6ea0fd8b46cd9f32e592fc",
+      "private_key": "-----BEGIN PRIVATE KEY-----\nMIICWwIBAAKBgQCp5nH+0dSoYVS4yI5HMzbzSVffexr4DyXUeB1ICK+M\/GSTWPQn\npsgdPHMhblWkrbEeA\/eaDKlZrQRNeFjpfckcu1hf5oaGEX9wJNpJpQksFR+Cvbwg\nNjBlTAdIB4poK36jpTu54e6\/XqlGergkSee00GYW6mXqSmCjWrQDiZ4u0QIDAQAB\nAoGAcc10KhVu9mJLl4JvGu4JLqi\/\/We+Rs4OruTN6EQ5Ipyk2bXJxQ2IGV02WPxI\nzYeyjcJmhX9ZqEGmEiY8mBmzLTwuSrevS99VmpCIedzOSYA\/mHd69k9g7NfK+h3A\nWGYjMAoZEN\/hgZymqyS6aG\/bvX7EuCOml11eY9hmq6\/QY8kCQQDrox2h0beOUDfZ\ne9U0SFuwSGRLMM3fLpsXWZRKOhgWW7gOnnpS8bnNEzCRXkf1OMrrbWANONTJske0\ncrZo87YzAkEAuJUQCMSZ\/Qv2R1zC54JR2sM3jW6DppdBS+y7TgfP7xfB4lmVTWcg\nbbg8uxi5tlcCpyGE7kg1B3EDWlXCJMha6wJAN8tx0sUzr3DzKH4X579SZpVdmig+\nNyBz\/L1rTYAf\/\/tLw7pmwIkYM6TdlS4736bI9aH6YmcYi4G5VNLsukEq3QJAIz97\n72Cz00nMfvYs1g7h2Le8zQpUo6RwuLH9VrpRL+RGhxX6V+ygmbM8DbJ8DGDzRb01\n6FbroX8oV8DWsTV9fwJAMbDVrYJHpszYFoiQXzmHzKY3gJwxyqSby68FN82ju7Ef\nz5eSzP\/\/03qIB6ZmmK67lKUPlO70bpAmAenUeHRJ4w==\n-----END RSA PRIVATE KEY-----\n",
+      "client_email": "vision@project-name-121453.iam.gserviceaccount.com",
+      "client_id": "393249309492349664946",
+      "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+      "token_uri": "https://accounts.google.com/o/oauth2/token",
+      "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+      "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/vision%40project-name-121453.iam.gserviceaccount.com"
+    }
+  },
+  "watson": {
+    "credentials": {
+      "url": "https://gateway-a.watsonplatform.net/visual-recognition/api",
+      "note": "It may take up to 5 minutes for this key to become active",
+      "api_key": "e7509a8c032f3bc2a8df1df476f8ef03436185fa"
+    }
+  },
+  "clarifai": {
+    "clientId": "vkGH9f7YU39-fbR4yKJ-8Fs79FPOKxRH-fLU_WiS",
+    "clientSecret": "LysBjyJ2q1C36hMQGLqGrJR2qU7hYALy5NsGkJVe"
+  }
+}
