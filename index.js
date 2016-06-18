@@ -65,6 +65,10 @@ app.get('/up', function(req, res, next) {
   res.send('ok');
 });
 
+app.get('/', function(req, res, next) {
+  res.send('Hi! I\'m the API server for <a href="http://inf.jesse.ws">Interactive Nonfiction</a>. You can view my source code <a href="http://github.com/okofish/inf-server">here</a>.');
+});
+
 app.use(function(err, req, res, next) {
   console.error(err);
   res.status(500).send({
