@@ -61,6 +61,10 @@ app.get('/identify/:service/:panoID', function(req, res, next) {
   });
 });
 
+app.get('/up', function(req, res, next) {
+  res.send('ok');
+});
+
 app.use(function(err, req, res, next) {
   console.error(err);
   res.status(500).send({
