@@ -5,27 +5,18 @@ var config = {
 }
 //console.log(require('./auth.json').watson.credentials.url)
 var _ = require('underscore'),
-  sv = require('gpan'),
   fs = require('fs'),
   db = require('monkii')('localhost/inf').get('results'),
   express = require('express'),
   app = express(),
   auth = require('./auth.json'),
+  sv = require('./streetview.js')(db, config.zoomLevel),
   Google = require('./services/google'),
   Watson = require('./services/watson'),
   Clarifai = require('./services/clarifai'),
   gvision = new Google(auth.google),
   wvision = new Watson(auth.watson),
   cvision = new Clarifai(auth.clarifai);
-
-sv.config({
-  zoom_level: config.zoomLevel,
-  tiles_prefix: 'image_',
-  path_to_image: 'panos',
-  output_prefix: 'output_',
-  tmp_dir_prefix: 'gpan_tmp',
-  pub: false
-});
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
