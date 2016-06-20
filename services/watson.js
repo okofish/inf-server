@@ -11,6 +11,7 @@ var Watson = function(config) {
     version: 'v3',
     version_date: '2015-05-19'
   });
+  self.name = 'watson';
 }
 
 Watson.prototype.detect = function(path, cb) {
@@ -23,7 +24,6 @@ Watson.prototype.detect = function(path, cb) {
     // TODO: Return a special error just for this case, so the user knows it's a permanent problem for the location.
     if (!err && !res.images[0].hasOwnProperty('error')) {
       var detections = _.pluck(res.images[0].classifiers[0].classes, 'class');
-      console.log(res.images[0].classifiers[0].classes)
       cb(null, detections);
     } else {
       cb(err || res.images[0].error);

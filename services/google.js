@@ -5,6 +5,7 @@ var Google = function(config) {
   var self = this;
 
   self.api = gcloud(config).vision();
+  self.name = 'google';
 }
 
 Google.prototype.detect = function(path, cb, query) {

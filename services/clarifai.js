@@ -6,6 +6,7 @@ var Clarifai = function(config) {
 
   self.api = clarifai;
   self.api.initialize(config);
+  self.name = 'clarifai';
 }
 
 Clarifai.prototype.detect = function(path, cb) {
