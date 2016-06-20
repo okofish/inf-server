@@ -26,7 +26,7 @@ app.use(function(req, res, next) {
 app.get('/identify/:service/:panoID', function(req, res, next) {
   var panoID = req.params.panoID;
   console.log('Identification request received for panorama ' + panoID);
-  
+
   var services = {
     google: gvision,
     watson: wvision,
@@ -55,6 +55,7 @@ app.get('/identify/:service/:panoID', function(req, res, next) {
               db.insert({
                 pano: panoID,
                 service: service.name,
+                file: path,
                 result: result
               }, function(err) {
                 if (err) {
