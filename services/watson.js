@@ -11,6 +11,7 @@ var Watson = function(config) {
     version: 'v3',
     version_date: '2015-05-19'
   });
+  self.name = 'watson';
 }
 
 Watson.prototype.detect = function(path, cb) {
