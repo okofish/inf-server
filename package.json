@@ -18,6 +18,8 @@
     "express": "^4.13.4",
     "gcloud": "^0.34.0",
     "gpan": "git+https://github.com/okofish/gpan.git",
+    "mongodb": "^2.1.18",
+    "monkii": "^1.2.0",
     "underscore": "^1.8.3",
     "watson-developer-cloud": "git+https://github.com/watson-developer-cloud/node-sdk#visual-recognition"
   }

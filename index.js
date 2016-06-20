@@ -7,6 +7,7 @@ var config = {
 var _ = require('underscore'),
   sv = require('gpan'),
   fs = require('fs'),
+  db = require('monkii')('localhost/inf').get('results'),
   express = require('express'),
   app = express(),
   auth = require('./auth.json'),
