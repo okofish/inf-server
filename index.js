@@ -34,32 +34,54 @@ app.use(function(req, res, next) {
 
 app.get('/identify/:service/:panoID', function(req, res, next) {
   var panoID = req.params.panoID;
-  console.log('Identification request received for panorama ' + panoID)
-  sv.savePanorama(panoID, function(err, path) {
-    if (!err) {
-      console.log('Panorama ' + panoID + ' saved at ' + path)
+  console.log('Identification request received for panorama ' + panoID);
+  
+  var services = {
+    google: gvision,
+    watson: wvision,
+    clarifai: cvision
+  };
+  var service = services[req.params.service] || services[config.defaultService] || services.clarifai;
 
-      var services = {
-        google: gvision,
-        watson: wvision,
-        clarifai: cvision
-      };
-      var service = services[req.params.service] || services[config.defaultService] || services.clarifai;
-
-      service.detect(path, function(err, detections) {
+  db.findOne({
+    pano: panoID,
+    service: service.name
+  }, function(err, doc) {
+    if (doc && doc.result && !err) {
+      res.send(doc.result);
+    } else {
+      sv.savePanorama(panoID, function(err, path) {
         if (!err) {
-          res.send({
-            detections: detections.slice(0, config.classLimit),
-            error: null
-          });
+          console.log('Panorama ' + panoID + ' saved at ' + path)
+
+          service.detect(path, function(err, detections) {
+            if (!err) {
+              var result = {
+                detections: detections.slice(0, config.classLimit),
+                error: null
+              };
+
+              db.insert({
+                pano: panoID,
+                service: service.name,
+                result: result
+              }, function(err) {
+                if (err) {
+                  // adding this to the db isn't critical, so we won't let any mongo errors affect the response
+                  console.error(err);
+                }
+                res.send(result);
+              });
+            } else {
+              next(err);
+            }
+          }, req.query)
         } else {
           next(err);
         }
-      }, req.query)
-    } else {
-      next(err);
+      });
     }
-  });
+  })
 });
 
 app.get('/up', function(req, res, next) {
