@@ -17,9 +17,9 @@
   "dependencies": {
     "clarifai": "git+https://github.com/Clarifai/clarifai-javascript.git",
     "express": "^4.13.4",
-    "google-cloud": "^0.34.0",
+    "google-cloud": "^0.40.0",
     "gpan": "git+https://github.com/okofish/gpan.git",
     "underscore": "^1.8.3",
-    "watson-developer-cloud": "git+https://github.com/watson-developer-cloud/node-sdk#visual-recognition"
+    "watson-developer-cloud": "git+https://github.com/watson-developer-cloud/node-sdk.git#visual-recognition"
   }
 }
