@@ -15,7 +15,7 @@
   "author": "Jesse Friedman <jesse@jesse.ws> (https://jesse.ws/)",
   "license": "ISC",
   "dependencies": {
-    "clarifai": "git+https://github.com/Clarifai/clarifai-javascript.git",
+    "clarifai": "^1.2.1",
     "express": "^4.13.4",
     "google-cloud": "^0.40.0",
     "gpan": "git+https://github.com/okofish/gpan.git",
