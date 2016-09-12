@@ -79,7 +79,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-var port = 8000;
+var port = process.env.PORT || 8000;
 app.listen(port, function() {
   console.log('inf-server listening on port ' + port + '!');
 });
