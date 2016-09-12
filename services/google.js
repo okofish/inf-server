@@ -1,5 +1,5 @@
 var _ = require('underscore'),
-  gcloud = require('gcloud');
+  gcloud = require('google-cloud');
 
 var Google = function(config) {
   var self = this;

@@ -1,5 +1,5 @@
 var fs = require('fs'),
-  clarifai = require('clarifai'); // TODO: update this when clarifai-official is added to npm
+  clarifai = require('clarifai');
 
 var Clarifai = function(config) {
   var self = this;
